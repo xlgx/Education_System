@@ -1,0 +1,32 @@
+*{	
+	margin:0;
+	padding:0;
+ }
+   
+.nav{
+	clear: both;
+	width: 10%;
+	height: 100%;
+	background: #9cd67b;
+	float:left;
+	line-height: 1em;
+	font-size:15px;
+	text-align:center;
+  }
+  
+a{
+	font-size:15px;
+}
+
+li{
+	margin: 10px 0;
+}
+.nav a:hover{
+	color: #009cff;
+	text-decoration: none;
+	}
+	
+a:link,a:visited,a:hover,a:active{
+	text-decoration: none;
+	color:#009cff;
+	}

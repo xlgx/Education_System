@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.Education.Bean">
+    <class name="studentbean" table="s_student">
+        <!--属性id,映射表里的字段id-->
+        <id name="sid" column="s_id">
+            <!--id的自增长方式采用数据库的本地方式-->
+            <generator class="native"></generator>
+        </id>
+        <property name="susername" column="s_username"/>
+        <property name="spassword" column="s_password"/>
+        <property name="sage" column="s_age"/>
+        <property name="sgrender" column="s_grender"/>
+        <property name="sphone" column="s_phone"/>
+        <property name="semail" column="s_email"/>
+        <property name="sdate" column="s_date"/>
+    </class>
+</hibernate-mapping>

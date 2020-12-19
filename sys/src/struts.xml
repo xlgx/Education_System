@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="admin_student" extends="struts-default">
+   		<action name="login" class="com.Education.Student.Action.loginAction" method="login">
+    		<result name="login">/index.jsp</result>
+    		<result name="ERROR">/login.jsp</result>
+    	</action>
+    	<action name="register" class="com.Education.Student.Action.registerAction" method="register">
+    		<result name="register">/login.jsp</result>
+    		<result name="ERROR">/register.jsp</result>
+    	</action>
+    	
+    	<action name="lookStudentMessage" class="com.Education.Student.Action.lookStudentMessageAction" method="lookStudentMessage">
+    		<result name="lookStudentMessage">admin_student/lookstudentMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_delete_student" class="com.Education.Student.Action.deleteStudentAction" method="admin_delete_student">
+    		<result name="admin_delete_student" type="redirect">admin_student/lookstudentMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_update_student" class="com.Education.Student.Action.updateStudentAction" method="admin_update_student">
+    		<result name="admin_update_student">admin_student/lookstudentMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_add_student" class="com.Education.Student.Action.addStudentAction" method="admin_add_student">
+    		<result name="admin_add_student">admin_student/lookstudentMessage.jsp</result>
+    		<result name="ERROR">admin_student/admin_add_student.jsp</result>
+    	</action>
+    	
+    </package>
+    
+    <package name="admin_teacher" extends="struts-default">
+    	
+    	<action name="lookTeacherMessage" class="com.Education.Teacher.Action.lookTeacherMessageAction" method="lookTeacherMessage">
+    		<result name="lookTeacherMessage">admin_teacher/lookteacherMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_delete_teacher" class="com.Education.Teacher.Action.deleteTeacherAction" method="admin_delete_teacher">
+    		<result name="admin_delete_teacher" type="redirect">admin_teacher/lookteacherMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_update_teacher" class="com.Education.Teacher.Action.updateTeacherAction" method="admin_update_teacher">
+    		<result name="admin_update_teacher">admin_teacher/lookteacherMessage.jsp</result>
+    	</action>
+    	
+    	<action name="admin_add_teacher" class="com.Education.Teacher.Action.addTeacherAction" method="admin_add_teacher">
+    		<result name="admin_add_teacher">admin_teacher/lookteacherMessage.jsp</result>
+    		<result name="ERROR">admin_teacher/admin_add_teacher.jsp</result>
+    	</action>
+    	
+    </package>
+</struts>

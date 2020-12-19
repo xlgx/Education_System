@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.Education.Bean">
+    <class name="teacherbean" table="t_teacher">
+        <id name="tid" column="t_id">
+            <generator class="native"></generator>
+        </id>
+        <property name="tusername" column="t_username"/>
+        <property name="tpassword" column="t_password"/>
+        <property name="tage" column="t_age"/>
+        <property name="tgrender" column="t_grender"/>
+        <property name="tphone" column="t_phone"/>
+        <property name="temail" column="t_email"/>
+        <property name="tdate" column="t_date"/>
+    </class>
+</hibernate-mapping>
